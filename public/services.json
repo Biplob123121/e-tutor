@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "picture": "./images/web.png",
+      "name": "Web Development",
+      "description": "I give a Web Development Course in Online. This course duration is 6 months. You can join my course as soon as possible.",
+      "price": "200",
+      "ratings" : 5
+    },
+    {
+      "id": "2",
+      "picture": "./images/seo.png",
+      "name": "Search Engine Optimization",
+      "description": "I give a Search Engine Optimization(SEO) Course in Online. This course duration is 3 months. Enroll the course and stay with me.",
+      "price": "150",
+      "ratings" : 5
+    },
+    {
+      "id": "3",
+      "picture": "./images/g-design.png",
+      "name": "Graphics Design",
+      "description": "I will arrange a Graphics Design Course as soon as possible. This course will be held in next months. Join the course to be a Graphics Designer.",
+      "price": "180",
+      "ratings" : 4.5
+    }
+  ]
