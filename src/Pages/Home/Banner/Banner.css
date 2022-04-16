@@ -1,0 +1,16 @@
+.banner-container{
+    background-color: rgb(237, 244, 252);
+}
+#site-title{
+    color: rgb(167, 52, 11);
+}
+.banner-btn{
+    background-color: rgb(167, 52, 11);
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 10px;
+}
+.banner-image{
+    width: 100%;
+}
