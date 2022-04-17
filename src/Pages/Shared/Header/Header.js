@@ -15,14 +15,15 @@ const Header = () => {
     }
 
     return (
-        <header>
-            <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark">
+        
+            <Navbar collapseOnSelect expand="lg" sticky='top' bg="secondary" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to='/home'><img className='title-logo' src={logo} alt="" />E-Tutor</Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/'><img className='title-logo' src={logo} alt="" />E-Tutor</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
+                            <Nav.Link as={Link} to='/home'>Home</Nav.Link>
+                            <Nav.Link as={Link} to='/blogs'>Blogs</Nav.Link>
                             <Nav.Link as={Link} to='/about'>About</Nav.Link>
                             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -46,7 +47,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </header>
+        
     );
 };
 
