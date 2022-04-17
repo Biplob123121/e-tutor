@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
 
@@ -8,14 +10,25 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
 
-    const handleLoginSubmit = event =>{
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const handleLoginSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        console.log(email, password);
+        signInWithEmailAndPassword(email, password);
     }
 
-    const navigateRegiter = event =>{
+    if (user) {
+        navigate('/home');
+    }
+
+    const navigateRegiter = event => {
         navigate('/register');
     }
 
@@ -23,7 +36,7 @@ const Login = () => {
         <section className='login-container'>
             <div className='container'>
                 <h1 className='text-center text-primary pt-3'>Login</h1>
-                <div className='form-container'> 
+                <div className='form-container'>
                     <form onSubmit={handleLoginSubmit}>
                         <input ref={emailRef} type="email" name="email" id="email" placeholder='Your Email' required />
                         <input ref={passwordRef} type="password" name="password" id="password" placeholder='Your Password' required />
