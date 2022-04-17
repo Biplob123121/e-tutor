@@ -1,14 +1,17 @@
 import React from 'react';
+import './Service.css';
 
-const Service = ({service}) => {
-    console.log(service);
-    const {name, price, picture, description} =service;
+const Service = ({ service }) => {
+    const { name, price, picture, description } = service;
     return (
-        <div>
-            <img src={picture} alt="" />
-            <h3>{name}</h3>
-            <p>Course Fee : ${price}</p>
-            <p><small>{description}</small></p>
+        <div className="card service">
+            <img src={picture} className="card-img-top service-img" alt=" "/>
+                <div className="card-body">
+                    <h4 className="card-title">{name}</h4>
+                    <h5>Course Fee : ${price}</h5>
+                    <p className="card-text">{description}</p>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                </div>
         </div>
     );
 };
