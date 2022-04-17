@@ -1,0 +1,8 @@
+.my-services{
+    background-color:  rgb(237, 244, 252);
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
