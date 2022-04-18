@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
@@ -10,13 +10,14 @@ const Register = () => {
     const passwordRef = useRef('');
     const nameRef = useRef('');
     const navigate = useNavigate();
+    const [agree, setAgree] = useState(false);
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
     const handleRegisterSubmit = event => {
         event.preventDefault();
@@ -37,12 +38,17 @@ const Register = () => {
         <section className='register-container'>
             <div className='container'>
                 <h1 className='text-center text-primary pt-3'>Please Register</h1>
-                <div className='form-container'>
+                <div className='register-form-container'>
                     <form onSubmit={handleRegisterSubmit}>
                         <input ref={nameRef} type="text" name="name" id="name" placeholder='Your Name' required />
                         <input ref={emailRef} type="email" name="email" id="email" placeholder='Your Email' required />
                         <input ref={passwordRef} type="password" name="password" id="password" placeholder='Your Password' required />
-                        <input type="submit" value="Register" />
+                        <p>
+                        <input onClick={ ()=>setAgree(!agree)} type="checkbox" name="terms" id="terms" /> <span className='px-1'>Accept terms and condition</span>
+                        </p>
+                        <input
+                        disabled={!agree}
+                         className='w-50 mx-auto d-block rounded-3 bg-info' type="submit" value="Register" />
                     </form>
                     <p>Already have an Account? <Link to='/login' className='text-primary text-decoration-none' onClick={navigateLogin}>Login</Link></p>
                     <SocialLogin></SocialLogin>
