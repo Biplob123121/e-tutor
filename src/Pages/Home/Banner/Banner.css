@@ -4,12 +4,15 @@
 #site-title{
     color: rgb(167, 52, 11);
 }
-.banner-btn{
-    background-color: rgb(167, 52, 11);
+.common-btn{
+    background-color: rgba(167, 53, 11, 0.562);
     color: white;
     padding: 8px 25px;
     border: none;
     border-radius: 10px;
+}
+.common-btn:hover{
+    background-color:rgba(167, 53, 11, 0.95); ;
 }
 .banner-image{
     width: 100%;

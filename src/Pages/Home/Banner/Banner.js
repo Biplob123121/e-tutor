@@ -14,7 +14,7 @@ const Banner = () => {
                             <h4>A Reliable Person can show you a Reliable Dream!!</h4>
                             <p>I am Biplob Kumar, a tutor of online program. I take some courses in online. I have provided this services for 5 years. You can join with me and enjoy with me...</p>
                             <Link to='/register'>
-                                <button className='banner-btn'>JOIN NOW</button>
+                                <button className='common-btn'>JOIN NOW</button>
                             </Link>
                         </div>
                     </div>
