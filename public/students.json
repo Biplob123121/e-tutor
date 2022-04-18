@@ -1,0 +1,50 @@
+[
+    {
+      "id": "1",
+      "picture": "./images/student/p-1.png",
+      "name": "Joe Root",
+      "rev": "Here, I have learnt how to manage the shedule of time. thank you for your best guidence..",
+      "gender": "Male",
+      "ratings" : 5
+    },
+    {
+      "id": "2",
+      "picture": "./images/student/p-2.png",
+      "name": "Doe Jhon",
+      "rev": "I am very grateful to you. You make the dificult lesson is very easier..",
+      "gender": "Male",
+      "ratings" : 4.5
+    },
+    {
+      "id": "3",
+      "picture": "./images/student/p-3.png",
+      "name": "Veen Diesel",
+      "rev": "Good teacher and Best man..",
+      "gender": "Male",
+      "ratings" : 5
+    },
+    {
+      "id": "4",
+      "picture": "./images/student/p-1.png",
+      "name": "Json Roy",
+      "rev": "It was a good time period with you, thank man...",
+      "gender": "Male",
+      "ratings" : 4.5
+    },
+    {
+      "id": "5",
+      "picture": "./images/student/p-5.png",
+      "name": "Stive Smith",
+      "rev": "He is the best person. He is not only a teacher but also a best guider...",
+      "gender": "Male",
+      "ratings" : 5
+    },
+    {
+      "id": "6",
+      "picture": "./images/student/p-6.png",
+      "name": "AB Morkel",
+      "rev": "He is the best teacher ever I have seen. He is very friendly.",
+      "gender": "Male",
+      "ratings" : 4.5
+    }
+  ]
